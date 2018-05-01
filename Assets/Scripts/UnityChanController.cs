@@ -13,10 +13,13 @@ public class UnityChanController : MonoBehaviour
 	}
 	
 	void Update () {
-		float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 		float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-		Vector3 addPos = new Vector3(horizontal, vertical, 0.0f) * mSpeedScale;
-		transform.position += addPos * Time.deltaTime;
+		transform.Rotate(0, horizontal * mSpeedScale, 0);
+		
+		float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+		Vector3 velocity = new Vector3(0, 0, vertical) * mSpeedScale;
+		velocity = transform.TransformDirection(velocity);
+		transform.position += velocity * Time.deltaTime;
 	}
 
 }
