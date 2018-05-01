@@ -803,6 +803,10 @@ GameObject:
   - component: {fileID: 114774548366089512}
   - component: {fileID: 114413473061465254}
   - component: {fileID: 114526483013696406}
+  - component: {fileID: 114108065528018926}
+  - component: {fileID: 114337722717577088}
+  - component: {fileID: 114677706630856488}
+  - component: {fileID: 114926704107955480}
   m_Layer: 0
   m_Name: unitychan_dynamic_locomotion
   m_TagString: Untagged
@@ -5404,6 +5408,35 @@ MonoBehaviour:
   - {fileID: 114060170255281502}
   debug: 1
   threshold: 0.01
+--- !u!114 &114108065528018926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302338904490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_viewIdField: 0
+  isRuntimeInstantiated: 0
+  m_ObjectStreamSendTime: 0
+  m_ObjectStreamRemainTimes: 0
+  m_IsReliable: 1
+  m_IsEncrypt: 1
+  InternalObservedComponents:
+  - {fileID: 114677706630856488}
+  - {fileID: 114337722717577088}
+  ObservedComponents:
+  - {fileID: 0}
+  instantiationId: -1
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  ownershipTransfer: 0
+  compressedStream: 0
 --- !u!114 &114116070628130054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5812,6 +5845,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.15
+--- !u!114 &114337722717577088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302338904490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a212333f0fad40b429ea9c65549ab6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95165110872595202}
+  m_Controller: {fileID: 9100000, guid: 8d5a0e0d58f4e4176a844a1a03976c19, type: 2}
+  m_SyncAnimLayers:
+  - m_Index: 0
+    m_Name: Base Layer
+    m_EnableSync: 1
+  - m_Index: 1
+    m_Name: Face
+    m_EnableSync: 1
+  m_SyncAnimParams:
+  - m_Type: 1
+    m_Name: Speed
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Direction
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Jump
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Rest
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: JumpHeight
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: GravityControl
+    m_EnableSync: 1
 --- !u!114 &114349823533781386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6137,6 +6209,31 @@ MonoBehaviour:
   - {fileID: 114360903361936570}
   debug: 1
   threshold: 0.01
+--- !u!114 &114677706630856488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302338904490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e43095d0b31c5c4da5d336507b33fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SyncPosition:
+    m_EnableSync: 1
+    m_EnableInterpolate: 1
+    m_LerpRate: 10
+  m_SyncRotation:
+    m_EnableSync: 1
+    m_EnableInterpolate: 0
+    m_LerpRate: 5
+  m_SyncScale:
+    m_EnableSync: 0
+    m_EnableInterpolate: 0
+    m_LerpRate: 1
+  m_SnapEnabled: 1
+  m_SnapThreshold: 3
 --- !u!114 &114729725972280024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6500,6 +6597,715 @@ MonoBehaviour:
   - {fileID: 114268235507506834}
   debug: 1
   threshold: 0.01
+--- !u!114 &114926704107955480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302338904490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5af7b8fdc9723749b09b2e6d6bf0982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animView: {fileID: 114337722717577088}
+  KeyAndAnimSettings:
+  - keyCode: 2
+    axisAction: 0
+    buttonAction: 0
+    actionType: 0
+    Position: {x: 0, y: 0, z: 0.1}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 2
+    axisAction: 1
+    buttonAction: 0
+    actionType: 0
+    Position: {x: 0, y: 0, z: -0.01}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 1
+    axisAction: 0
+    buttonAction: 0
+    actionType: 1
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 5, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 1
+    axisAction: 1
+    buttonAction: 0
+    actionType: 1
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: -5, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 2
+    axisAction: 0
+    buttonAction: 0
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 1
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 2
+    axisAction: 1
+    buttonAction: 0
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 0
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: -1
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 1
+    axisAction: 0
+    buttonAction: 0
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 1
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 1
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 1
+    axisAction: 1
+    buttonAction: 0
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 1
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: -1
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 6
+    axisAction: 0
+    buttonAction: 2
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 2
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 1
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 6
+    axisAction: 0
+    buttonAction: 1
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 2
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 3
+    axisAction: 0
+    buttonAction: 2
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 3
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 1
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
+  - keyCode: 3
+    axisAction: 0
+    buttonAction: 1
+    actionType: 3
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0}
+    SelectLayer: 0
+    layerInfo:
+    - m_Index: 0
+      m_Name: Base Layer
+      m_animWeight: 0
+    - m_Index: 1
+      m_Name: Face
+      m_animWeight: 0
+    SelectParam: 3
+    paramInfo:
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Speed
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: Direction
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Jump
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 4
+      m_Name: Rest
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: JumpHeight
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    - m_Index: 0
+      m_Type: 1
+      m_Name: GravityControl
+      m_floatValue: 0
+      m_intValue: 0
+      m_boolValue: 0
+    instantiatePrefab: {fileID: 0}
+    instantiateType: 0
+    PositionMin: {x: 0, y: 0, z: 0}
+    PositionMax: {x: 0, y: 0, z: 0}
+    RotationMin: {x: 0, y: 0, z: 0}
+    RotationMax: {x: 0, y: 0, z: 0}
 --- !u!114 &114933743877843048
 MonoBehaviour:
   m_ObjectHideFlags: 1
