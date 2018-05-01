@@ -807,6 +807,7 @@ GameObject:
   - component: {fileID: 114337722717577088}
   - component: {fileID: 114677706630856488}
   - component: {fileID: 114926704107955480}
+  - component: {fileID: 114908691685508230}
   m_Layer: 0
   m_Name: unitychan_dynamic_locomotion
   m_TagString: Untagged
@@ -6550,6 +6551,18 @@ MonoBehaviour:
   - {fileID: 114755930917598730}
   debug: 1
   threshold: 0.01
+--- !u!114 &114908691685508230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302338904490176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1341f31cc5804e5784cf72a8999caa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mSpeedScale: 5
 --- !u!114 &114908735295877274
 MonoBehaviour:
   m_ObjectHideFlags: 1
