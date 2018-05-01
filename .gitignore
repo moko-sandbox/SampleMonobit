@@ -328,6 +328,8 @@ sysinfo.txt
 
 # Build directory
 BuildIOS
+BuildPC.app
+
 # Monobit
 MonobitAuthenticateCode.asset
 MonobitServerSettings.asset
