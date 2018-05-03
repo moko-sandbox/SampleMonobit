@@ -662,7 +662,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 29079570-35c9-4295-af98-6d6e1ed1e0dc
-  projectName: 
+  projectName: SampleMonobit
   organizationId: yukiehori
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
