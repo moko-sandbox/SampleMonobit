@@ -220,6 +220,9 @@ GameObject:
   - component: {fileID: 114098809157496808}
   - component: {fileID: 143428234674967326}
   - component: {fileID: 114039581340855624}
+  - component: {fileID: 114346315606238546}
+  - component: {fileID: 114326540309840598}
+  - component: {fileID: 114854015706476076}
   m_Layer: 8
   m_Name: Bear
   m_TagString: Untagged
@@ -961,6 +964,59 @@ MonoBehaviour:
   BulletSpawnPoint: {fileID: 4007009651442498}
   Bullet: {fileID: 1981265087357586}
   BulletParent: {fileID: 0}
+--- !u!114 &114326540309840598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455226515964572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e43095d0b31c5c4da5d336507b33fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SyncPosition:
+    m_EnableSync: 1
+    m_EnableInterpolate: 1
+    m_LerpRate: 10
+  m_SyncRotation:
+    m_EnableSync: 1
+    m_EnableInterpolate: 0
+    m_LerpRate: 5
+  m_SyncScale:
+    m_EnableSync: 0
+    m_EnableInterpolate: 0
+    m_LerpRate: 1
+  m_SnapEnabled: 1
+  m_SnapThreshold: 3
+--- !u!114 &114346315606238546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455226515964572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_viewIdField: 0
+  isRuntimeInstantiated: 0
+  m_ObjectStreamSendTime: 0
+  m_ObjectStreamRemainTimes: 0
+  m_IsReliable: 1
+  m_IsEncrypt: 0
+  InternalObservedComponents: []
+  ObservedComponents:
+  - {fileID: 114326540309840598}
+  - {fileID: 114854015706476076}
+  instantiationId: 0
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  ownershipTransfer: 0
+  compressedStream: 0
 --- !u!114 &114774934875402938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -972,6 +1028,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7128e90e23cec794bbd82aed1bf4c48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114854015706476076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1455226515964572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a212333f0fad40b429ea9c65549ab6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95729197161133744}
+  m_Controller: {fileID: 9100000, guid: c116d990339f4ae4f8bd3e39f04abb4b, type: 2}
+  m_SyncAnimLayers:
+  - m_Index: 0
+    m_Name: Base Layer
+    m_EnableSync: 1
+  m_SyncAnimParams:
+  - m_Type: 1
+    m_Name: Speed
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Direction
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Shoot
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Throw
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Die
+    m_EnableSync: 1
 --- !u!114 &114890312935474772
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -164,6 +164,9 @@ GameObject:
   - component: {fileID: 114296916902480410}
   - component: {fileID: 114634653723202494}
   - component: {fileID: 114957324194008746}
+  - component: {fileID: 114242877786622522}
+  - component: {fileID: 114877655187751260}
+  - component: {fileID: 114763743309596830}
   m_Layer: 9
   m_Name: Dude
   m_TagString: Player
@@ -2927,6 +2930,34 @@ MonoBehaviour:
   Prev: {fileID: 2800000, guid: a67a804edf0795d4eabefc5ee4a824ab, type: 3}
   Pause: {fileID: 2800000, guid: 6d76830bbf4f7f345ac9735473080b92, type: 3}
   isRecording: 0
+--- !u!114 &114242877786622522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113717939893430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277584237ad31144584195f79af03cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_viewIdField: 0
+  isRuntimeInstantiated: 0
+  m_ObjectStreamSendTime: 0
+  m_ObjectStreamRemainTimes: 0
+  m_IsReliable: 1
+  m_IsEncrypt: 1
+  InternalObservedComponents: []
+  ObservedComponents:
+  - {fileID: 114877655187751260}
+  - {fileID: 114763743309596830}
+  instantiationId: 0
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  ownershipTransfer: 0
+  compressedStream: 0
 --- !u!114 &114296916902480410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2978,6 +3009,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasLog: 0
+--- !u!114 &114763743309596830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113717939893430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a212333f0fad40b429ea9c65549ab6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Animator: {fileID: 95244141941198076}
+  m_Controller: {fileID: 9100000, guid: 29ed5a05bb8ad434a993329a6d8879a8, type: 2}
+  m_SyncAnimLayers:
+  - m_Index: 0
+    m_Name: Base Layer
+    m_EnableSync: 1
+  - m_Index: 1
+    m_Name: Wounded
+    m_EnableSync: 1
+  - m_Index: 2
+    m_Name: HoldLog
+    m_EnableSync: 1
+  m_SyncAnimParams:
+  - m_Type: 1
+    m_Name: Speed
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: AngularSpeed
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Direction
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Slide
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Wounded
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Vault
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Dead
+    m_EnableSync: 1
+  - m_Type: 1
+    m_Name: Collider
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: HoldLog
+    m_EnableSync: 1
+  - m_Type: 4
+    m_Name: Shoot
+    m_EnableSync: 1
+--- !u!114 &114877655187751260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1113717939893430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e43095d0b31c5c4da5d336507b33fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SyncPosition:
+    m_EnableSync: 1
+    m_EnableInterpolate: 1
+    m_LerpRate: 10
+  m_SyncRotation:
+    m_EnableSync: 1
+    m_EnableInterpolate: 0
+    m_LerpRate: 5
+  m_SyncScale:
+    m_EnableSync: 0
+    m_EnableInterpolate: 0
+    m_LerpRate: 1
+  m_SnapEnabled: 1
+  m_SnapThreshold: 3
 --- !u!114 &114934074504553132
 MonoBehaviour:
   m_ObjectHideFlags: 1
