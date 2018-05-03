@@ -15,18 +15,31 @@ public class ThirdPersonCamera : MonoBehaviour
 	Transform follow;
 	
 	void Start(){
-		follow = GameObject.FindWithTag ("Player").transform;	
+//		PlayerをPrefabにした結果、カメラが追従するオブジェクトを取得できずエラーになっているので、LastUpdateの方で制御するよう修正する。		
+//		follow = GameObject.FindWithTag ("Player").transform;
 	}
 	
 	void LateUpdate ()
 	{
-		// setting the target position to be the correct offset from the 
-		m_TargetPosition = follow.position + Vector3.up * distanceUp - follow.forward * distanceAway;
-		
-		// making a smooth transition between it's current position and the position it wants to be in
-		transform.position = Vector3.Lerp(transform.position, m_TargetPosition, Time.deltaTime * smooth);
-		
-		// make sure the camera is looking the right way!
-		transform.LookAt(follow);
+		if (follow == null)
+		{
+			// プレイヤーが存在したら、そのtransformをfollowにセットする
+			GameObject gameObject = GameObject.FindWithTag("Player");
+			if (gameObject != null)
+			{
+				follow = gameObject.transform;
+			}			
+		}
+		else
+		{	
+			// setting the target position to be the correct offset from the 
+			m_TargetPosition = follow.position + Vector3.up * distanceUp - follow.forward * distanceAway;
+			
+			// making a smooth transition between it's current position and the position it wants to be in
+			transform.position = Vector3.Lerp(transform.position, m_TargetPosition, Time.deltaTime * smooth);
+			
+			// make sure the camera is looking the right way!
+			transform.LookAt(follow);
+		}
 	}
 }
