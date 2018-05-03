@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using MonobitEngine;
 
 /// <summary>
 /// Animator Recorder script.
 /// Should work we any animator, be sure to register your states in the dictionnary in InitStateDictionnary()
 /// </summary>
-public class Recorder : MonoBehaviour {
+public class Recorder : MonobitEngine.MonoBehaviour {
 	
 	Animator m_Animator;
 	
@@ -32,6 +33,13 @@ public class Recorder : MonoBehaviour {
 	
 	void OnGUI() 
 	{		
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+		}
+		
+
 		if(isRecording)
 		{
 	        if (GUILayout.Button(Pause))
@@ -104,6 +112,13 @@ public class Recorder : MonoBehaviour {
 	
 	void Update()
 	{
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+		}
+		
+		
 		if(isRecording)
 		{				
 			if(samples.Count == (FrameCount-1)) // has looped, removed 1st sample

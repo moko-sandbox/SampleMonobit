@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using MonobitEngine;
   
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CharacterController))]  
@@ -9,7 +10,7 @@ using System.Collections;
 /// Enables Actions for the main character
 /// </summary>/
 /// 
-public class Action : MonoBehaviour {		
+public class Action : MonobitEngine.MonoBehaviour {		
 	
 	public bool Slide; 				// slide under obstacles
 	public bool Vault;				// vaults over obstacles
@@ -34,6 +35,13 @@ public class Action : MonoBehaviour {
     
 	void Update ()  
 	{
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+		}
+		
+		
 		if(GetComponent<Recorder>().enabled && !GetComponent<Recorder>().isRecording) return;
 
 		if (m_Animator)

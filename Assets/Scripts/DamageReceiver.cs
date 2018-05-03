@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using MonobitEngine;
 
 [RequireComponent(typeof(Animator))]
 
 /// <summary>
 /// Damage receiver for the player
 /// </summary>
-public class DamageReceiver : MonoBehaviour 
+public class DamageReceiver : MonobitEngine.MonoBehaviour 
 {		
 	const float m_WounderDampTime = 0.15f;
 	
@@ -21,6 +22,13 @@ public class DamageReceiver : MonoBehaviour
 	
 	void Update()
 	{
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+		}
+		
+		
 		m_Animator.SetFloat("Wounded",m_Damage, m_WounderDampTime, Time.deltaTime);	
 		
 		float wounded = m_Animator.GetFloat("Wounded"); // to get the damped value

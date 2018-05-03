@@ -1,13 +1,14 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using MonobitEngine;
   
 [RequireComponent(typeof(Animator))]
 
 /// <summary>
 /// Base player script
 /// </summary>
-public class Player : MonoBehaviour {
+public class Player : MonobitEngine.MonoBehaviour {
 	
     private Animator m_Animator;
     private Locomotion m_Locomotion = null;
@@ -25,6 +26,14 @@ public class Player : MonoBehaviour {
     
 	void Update ()  
 	{
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+			
+		}
+		
+		
 		if(m_Locomotion == null) m_Locomotion = new Locomotion(m_Animator);
 		
         if (m_Animator && Camera.main)

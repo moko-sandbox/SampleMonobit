@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using MonobitEngine;
 
 /// <summary>
 /// Makes player shoot bubbles
 /// </summary>
 /// 
-public class Player_Shoot : MonoBehaviour {
+public class Player_Shoot : MonobitEngine.MonoBehaviour {
 	
 	public GameObject Bullet;
 	public Transform BulletSpawnPoint;
@@ -25,6 +26,13 @@ public class Player_Shoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{		
+		// Monobitでオブジェクト所有権を所持しなければ実行しない
+		if (!monobitView.isMine)
+		{
+			return;
+		}
+		
+		
 		bool shoot = Input.GetButton("Fire1");
 		m_Animator.SetBool("Shoot",shoot);
 
