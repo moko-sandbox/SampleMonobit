@@ -33,6 +33,13 @@ public class NPC_ShootPlayer : MonoBehaviour {
 		
 	void Update ()
 	{	
+		// ホスト以外は処理をしない
+		if (!MonobitEngine.MonobitNetwork.isHost)
+		{
+			return;
+		}
+
+		
 		if(ShouldShootPlayer())
 		{			
 			m_Animator.SetBool("Shoot", true); // tell animator to shoot

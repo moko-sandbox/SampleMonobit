@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// Damage receiver for NPC
 /// </summary>
-public class NPC_DamageReceiver : MonoBehaviour {
+public class NPC_DamageReceiver : MonobitEngine.MonoBehaviour {
 	
 	Animator m_Animator;
 	
@@ -22,10 +22,17 @@ public class NPC_DamageReceiver : MonoBehaviour {
 	
 	void Update()
 	{		
+		// ホスト以外は処理をしない
+		if (!MonobitEngine.MonobitNetwork.isHost)
+		{
+			return;
+		}
+
+		
 		if(m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Dying"))
 		{
 			m_Animator.SetBool("Die",false);
-			GetComponent<CharacterController>().enabled = false; // disable collision when dead.
+			monobitView.RPC("CharacterControllerOff", MonobitEngine.MonobitTargets.All, null);
 		}
 		
 		if(m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.Death")) // when dead, character start floating up (rapture!)
@@ -34,5 +41,11 @@ public class NPC_DamageReceiver : MonoBehaviour {
 			position.y += Time.deltaTime;
 			transform.position = position;
 		}
+	}
+
+	[MunRPC]
+	void CharacterControllerOff()
+	{
+		GetComponent<CharacterController>().enabled = false; // disable collision when dead.
 	}
 }

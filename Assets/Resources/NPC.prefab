@@ -1010,7 +1010,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114326540309840598}
   - {fileID: 114854015706476076}
-  instantiationId: 0
+  instantiationId: -1
   ownerId: 0
   group: 0
   prefixBackup: -1
